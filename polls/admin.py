@@ -16,6 +16,7 @@ class QuestionAdmin(admin.ModelAdmin):
     ]
 	inlines = [ChoiceInline]
 	list_filter = ['pub_date']
+	date_hierarchy = 'pub_date'
 	
 admin.site.register(Question, QuestionAdmin)
 admin.site.register(Choice)
